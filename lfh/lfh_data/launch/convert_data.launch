@@ -1,0 +1,7 @@
+<launch>
+    <rosparam file="$(find lfh_config)/config/lfh_params.yaml" command="load" />
+
+    <node pkg="lfh_data" type="convert_data.py" respawn="false" name="lfh_convert" output="screen">
+    </node>
+
+</launch>

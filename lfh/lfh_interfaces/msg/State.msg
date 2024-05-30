@@ -1,0 +1,2 @@
+float32 error_distance
+float32 error_angle

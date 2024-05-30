@@ -1,0 +1,10 @@
+# Goal
+geometry_msgs/PoseStamped goal_pose
+
+---
+# Result
+bool finish
+
+---
+# Feedback
+lfh_interfaces/State state

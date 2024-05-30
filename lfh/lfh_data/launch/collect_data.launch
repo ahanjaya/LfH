@@ -1,0 +1,14 @@
+<launch>
+    <arg name="config" default="front_laser" />
+    <arg name="node_start_delay" default="2.0" />
+
+    <!-- Launch Gazebo with the specified world -->
+    <include file="$(find jackal_gazebo)/launch/empty_world.launch">
+        <arg name="config" value="$(arg config)" />
+    </include>
+
+    <!-- LfH collect data -->
+    <rosparam file="$(find lfh_config)/config/lfh_params.yaml" command="load" />
+    <node name="lfh_collect_data" pkg="lfh_data" type="collect_data.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@'"/>
+
+</launch>

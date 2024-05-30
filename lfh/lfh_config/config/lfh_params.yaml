@@ -1,0 +1,30 @@
+LfH:
+  window_size : 200
+  local_dist : 1.0
+
+  robot_width : 0.43 # m
+  robot_length : 0.508 # m
+  frame_width : 500
+  frame_height : 500
+
+  len_window : 20
+  weight_filter : 0.5
+
+  max_v : 0.8  # 0.5
+  scale_max_w : 3
+  collect_time : 2.0
+
+  num_of_raycast : 50
+  num_of_vel : 2
+
+  device : "cuda"
+  num_epoch : 100
+  batch_size : 4
+  learning_rate : 0.0001
+
+  kp_theta : 0.7
+  dist_accuracy : 0.15
+  angle_accuracy : 0.05
+
+  save_data : False
+  plot_data : True

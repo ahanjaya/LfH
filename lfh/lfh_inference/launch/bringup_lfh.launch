@@ -1,0 +1,14 @@
+<launch>
+
+    <include file="$(find jackal_gazebo)/launch/empty_world.launch">
+        <arg name="config" value="front_laser" />
+    </include>
+
+    <include file="$(find jackal_viz)/launch/view_robot.launch">
+        <arg name="config" value="lfh_navigation" />
+    </include>
+
+    <include file="$(find lfh_inference)/launch/lfh_controller.launch" />
+    <!-- <include file="$(find lfh_inference)/launch/odom_navigation_demo.launch" /> -->
+
+</launch>
